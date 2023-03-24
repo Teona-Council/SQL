@@ -1,4 +1,4 @@
---Create a store's inventory list
+/**Example 1: Create a store's inventory list**/
 
 CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, waterproofing TEXT); 
 
@@ -18,14 +18,14 @@ INSERT INTO inventory VALUES (13, "chairs", 3, 65, "Y");
 INSERT INTO inventory VALUES (14, "medkits", 7, 80, "Y");
 INSERT INTO inventory VALUES (15, "rope", 2, 60, "Y");
 
---display the database ordered by price.
+/**display the database ordered by price.**/
 SELECT * FROM inventory ORDER BY price;
 
---display the database ordered by quantity.
+/**display the database ordered by quantity.**/
 SELECT * FROM inventory ORDER BY quantity;
 
---display the database ordered by specified price and if items have waterproofing.
+/**display the database ordered by specified price and if items have waterproofing.**/
 SELECT * FROM inventory WHERE price > 60 AND "waterproofing" = "Y";
 
---dislay total number of items in inventory.
+/**dislay total number of items in inventory**/
 SELECT SUM(quantity) FROM inventory;
